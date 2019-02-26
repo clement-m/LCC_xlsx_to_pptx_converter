@@ -1,2 +1,0 @@
-Information about this package.
-========================
