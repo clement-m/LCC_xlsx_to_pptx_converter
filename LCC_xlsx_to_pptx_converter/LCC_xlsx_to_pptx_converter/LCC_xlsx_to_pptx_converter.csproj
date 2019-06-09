@@ -58,7 +58,6 @@
     <Reference Include="System.Drawing" />
     <Reference Include="System.Net.Http" />
     <Reference Include="System.Windows.Forms" />
-    <Reference Include="System.Xml" />
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
@@ -66,7 +65,9 @@
     <Compile Include="Class\main\convertProcess.cs" />
     <Compile Include="Class\datas\data.cs" />
     <Compile Include="Class\datas\dataset.cs" />
-    <Compile Include="Class\pptx\Clean.cs" />
+    <Compile Include="Class\pptx\changeImageSlide.cs" />
+    <Compile Include="Class\pptx\changeTextInSlide.cs" />
+    <Compile Include="Class\pptx\clean.cs" />
     <Compile Include="Class\pptx\createPPTX.cs" />
     <Compile Include="Class\xlsx\copyXlsxFile.cs" />
     <Compile Include="Class\xlsx\deleteXlsx.cs" />

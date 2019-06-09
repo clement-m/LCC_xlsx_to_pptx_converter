@@ -8,43 +8,31 @@ namespace LCC_xlsx_to_pptx_converter.Class
 {
   public static class convertProcess
   {
-    public static void run()
+    public static void run(string customerName)
     {
-      Console.WriteLine("Lancement de LCC xlsx_to_pptx_convertor");
+      Console.WriteLine("LCC xlsx_to_pptx_convertor Launched...");
       Console.WriteLine("=====================================================");
       string pathFolder = GetDataDir_Data();
-
-      // PREPARE XLSX, DATA AND IMAGE
-      Console.WriteLine("Etape I:\n-Copying file");
+      Console.WriteLine("Step I:\n-Copying file");
       CopyXlsxFile.run(pathFolder);
       Console.WriteLine("-Copying file ok");
-
       Console.WriteLine("-Opening and extract data");
       Data D = OpenXlsx.run(pathFolder);
       Console.WriteLine("-data extracted ok");
-
-      // CREATE PPTX
-      Console.WriteLine("Etape II:\nCreate A-Version Presentation"); 
-      Aspose.Slides.Presentation pres = createPPTX.run(pathFolder, D);
-
-
-      // CLEANING DATA AND PPTX
+      Console.WriteLine("Step II:\n-Create A-Version Presentation"); 
+      Aspose.Slides.Presentation pres = createPPTX.run(pathFolder, D, customerName);
       Console.WriteLine("-Dispose data");
       D.dispose();
       Console.WriteLine("-Data disposed");
-
       Console.WriteLine("-Delete temporaries file");
       DeleteXlsx.run(pathFolder);
       Console.WriteLine("-Files deleted");
-
-      Console.WriteLine("Etape III:\nCleaning Images");
+      Console.WriteLine("Step III:\n-Cleaning Images");
       //DeleteImages.run(pathFolder);
-      Console.WriteLine("Etape III:\nCleaning success");
-
-      Console.WriteLine("Etape IV:\nConverting A-Version to PPTX");
+      Console.WriteLine("-Cleaning success");
+      Console.WriteLine("Step IV:\n-Converting A-Version to PPTX");
       Clean.run(pres, pathFolder);
-      Console.WriteLine("Etape IV:\nConvertion succeeded");
-
+      Console.WriteLine("-Convertion succeeded");
       Console.WriteLine("\n\nProgram Finished. Press any key to exit....");
       Console.ReadLine();
     }

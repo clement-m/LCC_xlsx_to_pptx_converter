@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using Aspose.Cells;
+using A = Aspose.Cells.Drawing;
 using System;
 using System.IO;
 using LCC_xlsx_to_pptx_converter.Class.main;
@@ -30,7 +31,7 @@ namespace LCC_xlsx_to_pptx_converter.Class.xlsx
 
           Console.WriteLine("WorkSheet N°" + worksheetId);
 
-          foreach (Aspose.Cells.Cell cell in worksheet.Cells)
+          foreach (Cell cell in worksheet.Cells)
           {
             int rowNumber    = cell.Row;
             int columnNumber = cell.Column;
@@ -49,7 +50,7 @@ namespace LCC_xlsx_to_pptx_converter.Class.xlsx
             D.addDataSet(DS);
           }
 
-          foreach (Aspose.Cells.Drawing.Picture pic in worksheet.Pictures)
+          foreach (A.Picture pic in worksheet.Pictures)
           {
             imageNumber++;
 
