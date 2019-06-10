@@ -72,9 +72,9 @@
     <Compile Include="Class\pptx\A-version\clean.cs" />
     <Compile Include="Class\pptx\A-version\createPPTX.cs" />
     <Compile Include="Class\pptx\A-version\getShape.cs" />
-    <Compile Include="Class\xlsx\copyXlsxFile.cs" />
-    <Compile Include="Class\xlsx\deleteXlsx.cs" />
-    <Compile Include="Class\xlsx\openXlsx.cs" />
+    <Compile Include="Class\xlsx\A-version\copyXlsxFile.cs" />
+    <Compile Include="Class\xlsx\A-version\deleteXlsx.cs" />
+    <Compile Include="Class\xlsx\A-version\openXlsx.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
