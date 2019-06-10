@@ -1,15 +1,18 @@
 ﻿using System.IO;
+using System.Collections.Generic;
 
 namespace LCC_xlsx_to_pptx_converter.Class.datas
 {
   class DeleteImages
   {
-    public static void run(string pathFolder)
+    public static void run(string pathFolder, List<string> listFile)
     {
-      Directory.Delete(pathFolder + "WorkBook1", true);
-      Directory.Delete(pathFolder + "WorkBook2", true);
-      Directory.Delete(pathFolder + "WorkBook3", true);
-      Directory.Delete(pathFolder + "WorkBook4", true);
+      int fileNumber = 0;
+      foreach(string fileName in listFile)
+      {
+        fileNumber++;
+        Directory.Delete(pathFolder + "WorkBook" + fileNumber, true);
+      }
     }
   }
 }

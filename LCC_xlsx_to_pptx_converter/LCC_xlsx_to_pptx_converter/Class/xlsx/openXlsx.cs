@@ -4,20 +4,26 @@ using A = Aspose.Cells.Drawing;
 using System;
 using System.IO;
 using LCC_xlsx_to_pptx_converter.Class.main;
+using LCC_xlsx_to_pptx_converter.Class.datas;
 
 namespace LCC_xlsx_to_pptx_converter.Class.xlsx
 {
   public static class OpenXlsx
   {
-    public static Data run(string dataDir)
+    public static Data run(List<string> listFile)
     {
       Data D = new Data();
 
+      string dataDir = getProgramDirectory.run();
+
       List<Workbook> WorkBooks = new List<Workbook>();
-      WorkBooks.Add(new Workbook(dataDir + "TEMP1.xlsx"));
-      WorkBooks.Add(new Workbook(dataDir + "TEMP2.xlsx"));
-      WorkBooks.Add(new Workbook(dataDir + "TEMP3.xlsx"));
-      WorkBooks.Add(new Workbook(dataDir + "TEMP4.xlsx"));
+
+      int fileNumber = 0;
+      foreach(string fileName in listFile)
+      {
+        fileNumber++;
+        WorkBooks.Add(new Workbook(fileName));
+      }
 
       int workbookId = 0;
       foreach(Workbook workbook in WorkBooks)
@@ -56,13 +62,12 @@ namespace LCC_xlsx_to_pptx_converter.Class.xlsx
 
             string fileName = dataDir +
               "\\WorkBook"  + workbookId  + "\\" +
-              "\\WorkSheet" + worksheetId + "\\" + 
               imageNumber + ".png"
             ;
 
-            if (!(Directory.Exists(dataDir + "\\WorkBook" + workbookId + "\\" + "\\WorkSheet" + worksheetId)))
+            if (!(Directory.Exists(dataDir + "\\WorkBook" + workbookId)))
             {
-              Directory.CreateDirectory(dataDir + "\\WorkBook" + workbookId + "\\" + "\\WorkSheet" + worksheetId);
+              Directory.CreateDirectory(dataDir + "\\WorkBook" + workbookId);
             }
 
             FileStream file = File.Create(fileName);
@@ -70,6 +75,10 @@ namespace LCC_xlsx_to_pptx_converter.Class.xlsx
             byte[] data = pic.Data;
 
             file.Write(data, 0, data.Length);
+
+            file.Close();
+
+            file.Dispose();
           }
         }
       }

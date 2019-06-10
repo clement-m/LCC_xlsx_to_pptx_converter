@@ -1,6 +1,8 @@
 ﻿using System;
+using System.IO;
 using System.Windows.Forms;
 using LCC_xlsx_to_pptx_converter.Class;
+using System.Collections.Generic;
 
 namespace LCC_xlsx_to_pptx_converter
 {
@@ -11,9 +13,43 @@ namespace LCC_xlsx_to_pptx_converter
       InitializeComponent();
     }
 
-    private void button1_Click(object sender, EventArgs e)
+    private void Button2_Click(object sender, EventArgs e)
     {
-      convertProcess.run(textBoxClient.Text);
+      List<string> listFile = new List<string>();
+
+      try
+      {
+        var o = new OpenFileDialog();
+        o.Multiselect = true;
+        if (o.ShowDialog() == System.Windows.Forms.DialogResult.OK)
+        {
+          
+          
+          string[] ddd = o.FileNames;
+          
+          int size = 0;
+          foreach(string moncul in ddd)
+          {
+            size++;
+          }
+
+          for (int i = 0; i <= size - 1; i++)
+          {
+            listFile.Add(o.FileNames[i]);
+          }
+        }
+
+        else
+        {
+          MessageBox.Show("File Not Uploaded", "Error Message", MessageBoxButtons.OK, MessageBoxIcon.Error);
+        }
+      }
+      catch (Exception ex)
+      {
+        MessageBox.Show(ex.Message);
+      }
+
+      convertProcess.run(listFile, textBoxTitle.Text);
     }
   }
 }

@@ -62,13 +62,16 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Class\datas\DeleteImages.cs" />
+    <Compile Include="Class\datas\getImage.cs" />
+    <Compile Include="Class\datas\getProgramDirectory.cs" />
     <Compile Include="Class\main\convertProcess.cs" />
     <Compile Include="Class\datas\data.cs" />
     <Compile Include="Class\datas\dataset.cs" />
-    <Compile Include="Class\pptx\changeImageSlide.cs" />
-    <Compile Include="Class\pptx\changeTextInSlide.cs" />
-    <Compile Include="Class\pptx\clean.cs" />
-    <Compile Include="Class\pptx\createPPTX.cs" />
+    <Compile Include="Class\pptx\A-version\changeImageSlide.cs" />
+    <Compile Include="Class\pptx\A-version\changeTextInSlide.cs" />
+    <Compile Include="Class\pptx\A-version\clean.cs" />
+    <Compile Include="Class\pptx\A-version\createPPTX.cs" />
+    <Compile Include="Class\pptx\A-version\getShape.cs" />
     <Compile Include="Class\xlsx\copyXlsxFile.cs" />
     <Compile Include="Class\xlsx\deleteXlsx.cs" />
     <Compile Include="Class\xlsx\openXlsx.cs" />
@@ -108,6 +111,8 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="Class\pptx\openXML\" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
