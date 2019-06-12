@@ -1,12 +1,11 @@
 ﻿using System.Collections.Generic;
-using Aspose.Cells;
-using A = Aspose.Cells.Drawing;
 using System;
 using System.IO;
-using LCC_xlsx_to_pptx_converter.Class.main;
 using LCC_xlsx_to_pptx_converter.Class.datas;
+using Aspose.Cells;
+using A = Aspose.Cells.Drawing;
 
-namespace LCC_xlsx_to_pptx_converter.Class.xlsx
+namespace LCC_xlsx_to_pptx_converter.Class.xlsx.A_version
 {
   public static class OpenXlsx
   {

@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
 
-namespace LCC_xlsx_to_pptx_converter.Class.main
+namespace LCC_xlsx_to_pptx_converter.Class.datas
 {
   public class Data
   {

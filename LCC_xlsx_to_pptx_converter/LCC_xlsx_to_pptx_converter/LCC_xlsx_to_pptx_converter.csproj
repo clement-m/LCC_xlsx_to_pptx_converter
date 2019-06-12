@@ -61,19 +61,21 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Class\datas\DeleteImages.cs" />
+    <Compile Include="Class\datas\deleteImages.cs" />
+    <Compile Include="Class\pptx\A-version\deleteSlide.cs" />
+    <Compile Include="Class\pptx\openXML\deletePptx.cs" />
     <Compile Include="Class\datas\getImage.cs" />
     <Compile Include="Class\datas\getProgramDirectory.cs" />
     <Compile Include="Class\main\convertProcess.cs" />
     <Compile Include="Class\datas\data.cs" />
     <Compile Include="Class\datas\dataset.cs" />
+    <Compile Include="Class\pptx\A-version\cloneSlide.cs" />
     <Compile Include="Class\pptx\A-version\changeImageSlide.cs" />
     <Compile Include="Class\pptx\A-version\changeTextInSlide.cs" />
     <Compile Include="Class\pptx\A-version\clean.cs" />
-    <Compile Include="Class\pptx\A-version\createPPTX.cs" />
-    <Compile Include="Class\pptx\A-version\getShape.cs" />
+    <Compile Include="Class\pptx\A-version\templatize.cs" />
     <Compile Include="Class\xlsx\A-version\copyXlsxFile.cs" />
-    <Compile Include="Class\xlsx\A-version\deleteXlsx.cs" />
+    <Compile Include="Class\xlsx\openXML\deleteXlsx.cs" />
     <Compile Include="Class\xlsx\A-version\openXlsx.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
@@ -96,8 +98,6 @@
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
     <None Include="packages.config" />
-    <None Include="pptx_template\template.pptx" />
-    <None Include="pptx_template\tt.pptx" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -111,8 +111,6 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Class\pptx\openXML\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

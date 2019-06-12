@@ -3,21 +3,22 @@ using DocumentFormat.OpenXml.Presentation;
 using DocumentFormat.OpenXml.Packaging;
 using A = DocumentFormat.OpenXml.Drawing;
 
-namespace LCC_xlsx_to_pptx_converter.Class.pptx
+namespace LCC_xlsx_to_pptx_converter.Class.pptx.A_version
 {
   public static class Clean
   {
-    public static void run(Aspose.Slides.Presentation pres, string pathFolder)
+    public static void run(string pathFolder)
     {
-      pres.Save(pathFolder + "SORTIE_PPTX.pptx", Aspose.Slides.Export.SaveFormat.Pptx);
-
-      using (PresentationDocument presentationDocument = PresentationDocument.Open(pathFolder + "SORTIE_PPTX.pptx", true))
+      using (PresentationDocument presentationDocument = PresentationDocument.Open(
+      pathFolder + 
+      "\\pptx_template\\" +
+      "NEW_TEMPLATE.pptx", true))
       {
         PresentationPart presentationPart = presentationDocument.PresentationPart;
 
         int slidesCount = presentationPart.SlideParts.Count();
 
-        DocumentFormat.OpenXml.Presentation.Presentation presentation = presentationPart.Presentation;
+        Presentation presentation = presentationPart.Presentation;
 
         SlideIdList slideIdList = presentation.SlideIdList;
 
@@ -60,8 +61,6 @@ namespace LCC_xlsx_to_pptx_converter.Class.pptx
         }
         presentationDocument.PresentationPart.Presentation.Save();
       }
-
-      pres.Dispose();
     }
   }
 }

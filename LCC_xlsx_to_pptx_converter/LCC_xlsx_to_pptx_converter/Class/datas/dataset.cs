@@ -1,4 +1,4 @@
-﻿namespace LCC_xlsx_to_pptx_converter.Class.main
+﻿namespace LCC_xlsx_to_pptx_converter.Class.datas
 {
   public class DataSet
   {
@@ -16,11 +16,6 @@
       this.row         = row;
       this.col         = col;
       this.textContent = textContent;
-    }
-
-    public void addImage(byte[] image)
-    {
-      this.image = image;
     }
   }
 }

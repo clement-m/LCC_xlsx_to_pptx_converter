@@ -1,8 +1,7 @@
 ﻿using System;
-using System.IO;
-using System.Windows.Forms;
-using LCC_xlsx_to_pptx_converter.Class;
 using System.Collections.Generic;
+using System.Windows.Forms;
+using LCC_xlsx_to_pptx_converter.Class.main;
 
 namespace LCC_xlsx_to_pptx_converter
 {
@@ -23,8 +22,6 @@ namespace LCC_xlsx_to_pptx_converter
         o.Multiselect = true;
         if (o.ShowDialog() == System.Windows.Forms.DialogResult.OK)
         {
-          
-          
           string[] ddd = o.FileNames;
           
           int size = 0;
@@ -38,7 +35,6 @@ namespace LCC_xlsx_to_pptx_converter
             listFile.Add(o.FileNames[i]);
           }
         }
-
         else
         {
           MessageBox.Show("File Not Uploaded", "Error Message", MessageBoxButtons.OK, MessageBoxIcon.Error);

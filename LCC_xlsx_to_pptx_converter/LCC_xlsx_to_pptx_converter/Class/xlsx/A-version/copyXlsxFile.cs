@@ -1,8 +1,7 @@
 ﻿using System.Collections.Generic;
 using Aspose.Cells;
-using LCC_xlsx_to_pptx_converter.Class.datas;
 
-namespace LCC_xlsx_to_pptx_converter.Class.xlsx
+namespace LCC_xlsx_to_pptx_converter.Class.xlsx.A_version
 {
   public static class CopyXlsxFile
   {
