@@ -30,8 +30,6 @@ namespace LCC_xlsx_to_pptx_converter.Class.main
       Console.WriteLine("Step II:\n-Create A-Version Presentation");
       
       int WB = 1;
-      //templatize.run(WB);
-      //A.Presentation pres;
       A.Presentation newPresentation;
 
       using (newPresentation = new A.Presentation())

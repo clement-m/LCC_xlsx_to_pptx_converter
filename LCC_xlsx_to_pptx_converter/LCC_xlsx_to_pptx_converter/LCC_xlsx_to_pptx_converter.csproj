@@ -73,7 +73,6 @@
     <Compile Include="Class\pptx\A-version\changeImageSlide.cs" />
     <Compile Include="Class\pptx\A-version\changeTextInSlide.cs" />
     <Compile Include="Class\pptx\A-version\clean.cs" />
-    <Compile Include="Class\pptx\A-version\templatize.cs" />
     <Compile Include="Class\xlsx\A-version\copyXlsxFile.cs" />
     <Compile Include="Class\xlsx\openXML\deleteXlsx.cs" />
     <Compile Include="Class\xlsx\A-version\openXlsx.cs" />
