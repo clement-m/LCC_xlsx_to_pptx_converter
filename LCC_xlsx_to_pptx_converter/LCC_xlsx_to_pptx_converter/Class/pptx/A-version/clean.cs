@@ -16,9 +16,14 @@ namespace LCC_xlsx_to_pptx_converter.Class.pptx.A_version
       {
         PresentationPart presentationPart = presentationDocument.PresentationPart;
 
+        
+
         int slidesCount = presentationPart.SlideParts.Count();
 
         Presentation presentation = presentationPart.Presentation;
+
+        presentation.SlideSize.Cy = 5158000;
+        //presentation.SlideSize.Cx = 10;
 
         SlideIdList slideIdList = presentation.SlideIdList;
 
@@ -32,7 +37,9 @@ namespace LCC_xlsx_to_pptx_converter.Class.pptx.A_version
 
           Slide sld = slidePart.Slide;
 
-          if(sld.InnerText.IndexOf("Evaluation only.") != -1)
+          
+
+          if (sld.InnerText.IndexOf("Evaluation only.") != -1)
           {
             int index = sld.InnerText.IndexOf("Evaluation only.");
 
