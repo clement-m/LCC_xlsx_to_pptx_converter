@@ -120,7 +120,7 @@ namespace LCC_xlsx_to_pptx_converter.Class.main
                 imageWanted = 16;
                 changeImageSlide.run2(newPresentation, imageWanted, WB, 32);
                 break;
-              case 22: // not ok
+              case 22:
                 imageWanted = 17;
                 changeImageSlide.run2(newPresentation, imageWanted, WB, 33);
                 imageWanted = 18;
@@ -133,10 +133,11 @@ namespace LCC_xlsx_to_pptx_converter.Class.main
                 changeImageSlide.run2(newPresentation, imageWanted, WB, 36);
                 break;
               case 24:
-                imageWanted = 21;
-                changeImageSlide.run2(newPresentation, imageWanted, WB, 36);
                 imageWanted = 22;
-                changeImageSlide.run2(newPresentation, imageWanted, WB, 37);
+                //changeImageSlide.run2(newPresentation, imageWanted, WB, 38);
+                imageWanted = 21;
+                //changeImageSlide.run2(newPresentation, imageWanted, WB, 37);
+                
                 break;
               case 25:
                 imageWanted = 33;
@@ -252,12 +253,12 @@ namespace LCC_xlsx_to_pptx_converter.Class.main
                 break;
               case 47:
                 imageWanted = 92;
-                changeImageSlide.run2(newPresentation, imageWanted, WB, 70);
+                changeImageSlide.run2(newPresentation, imageWanted, WB, 70); // mank 2
                 imageWanted = 95;
                 changeImageSlide.run2(newPresentation, imageWanted, WB, 71);
                 break;
               case 48:
-                imageWanted = 103;
+                imageWanted = 96;
                 changeImageSlide.run2(newPresentation, imageWanted, WB, 72); //d 1/2/3!!
                 break;
               case 49:
@@ -267,15 +268,15 @@ namespace LCC_xlsx_to_pptx_converter.Class.main
                 changeImageSlide.run2(newPresentation, imageWanted, WB, 74);
                 break;
               case 50:
-                imageWanted = 103;
+                imageWanted = 98;
                 changeImageSlide.run2(newPresentation, imageWanted, WB, 75);
                 break;
               case 51:
                 // UN TITRE QUI CHANGE PAS (NORMALEMENT) PAS VERIIF
                 break;
               case 52:
-                imageWanted = 103;
-                changeImageSlide.run2(newPresentation, imageWanted, WB, 76);
+                imageWanted = 92;
+                changeImageSlide.run2(newPresentation, imageWanted, WB, 76); 
                 break;
               case 53:
                 imageWanted = 103;
@@ -283,20 +284,20 @@ namespace LCC_xlsx_to_pptx_converter.Class.main
                 break;
               case 54:
                 imageWanted = 103;
-                changeImageSlide.run2(newPresentation, imageWanted, WB, 70);
+                //changeImageSlide.run2(newPresentation, imageWanted, WB, 70);
                 imageWanted = 103;
                 changeImageSlide.run2(newPresentation, imageWanted, WB, 78);
                 break;
               case 55:
-                imageWanted = 103;
+                imageWanted = 53;
                 changeImageSlide.run2(newPresentation, imageWanted, WB, 80);
-                imageWanted = 103;
+                imageWanted = 43;
                 changeImageSlide.run2(newPresentation, imageWanted, WB, 79);
                 break;
               case 56:
-                imageWanted = 103;
+                imageWanted = 54;
                 changeImageSlide.run2(newPresentation, imageWanted, WB, 82);
-                imageWanted = 103;
+                imageWanted = 44;
                 changeImageSlide.run2(newPresentation, imageWanted, WB, 81);
                 break;
             }
