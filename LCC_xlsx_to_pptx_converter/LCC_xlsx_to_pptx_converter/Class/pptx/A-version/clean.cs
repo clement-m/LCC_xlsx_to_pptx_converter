@@ -9,6 +9,7 @@ namespace LCC_xlsx_to_pptx_converter.Class.pptx.A_version
   {
     public static void run(string pathFolder)
     {
+
       using (PresentationDocument presentationDocument = PresentationDocument.Open(
       pathFolder + 
       "\\pptx_template\\" +
@@ -16,13 +17,11 @@ namespace LCC_xlsx_to_pptx_converter.Class.pptx.A_version
       {
         PresentationPart presentationPart = presentationDocument.PresentationPart;
 
-        
-
         int slidesCount = presentationPart.SlideParts.Count();
 
         Presentation presentation = presentationPart.Presentation;
 
-        presentation.SlideSize.Cy = 5158000;
+        presentation.SlideSize.Cy = 5150000;
         //presentation.SlideSize.Cx = 10;
 
         SlideIdList slideIdList = presentation.SlideIdList;
@@ -36,8 +35,6 @@ namespace LCC_xlsx_to_pptx_converter.Class.pptx.A_version
           SlidePart slidePart = (SlidePart)presentationPart.GetPartById(slidePartRelationshipId);
 
           Slide sld = slidePart.Slide;
-
-          
 
           if (sld.InnerText.IndexOf("Evaluation only.") != -1)
           {
@@ -62,9 +59,7 @@ namespace LCC_xlsx_to_pptx_converter.Class.pptx.A_version
                 textBody.AppendChild<A.Paragraph>(new A.Paragraph());
               }
             }
-            sld.Save();
           }
-          sld.Save();
         }
         presentationDocument.PresentationPart.Presentation.Save();
       }
