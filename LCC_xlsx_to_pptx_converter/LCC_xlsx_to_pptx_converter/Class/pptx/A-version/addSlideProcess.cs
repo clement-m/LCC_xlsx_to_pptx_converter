@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Aspose.Slides;
+﻿using Aspose.Slides;
 
 namespace LCC_xlsx_to_pptx_converter.Class.pptx.A_version
 {

@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Collections.Generic;
 using A = Aspose.Slides;
 
 namespace LCC_xlsx_to_pptx_converter.Class.pptx.A_version
@@ -52,18 +48,7 @@ namespace LCC_xlsx_to_pptx_converter.Class.pptx.A_version
               101, 24, 
               102, 25);
 
-            if(listFile.Count != 1)
-            {
-              WB++;
-              if(WB == listFile.Count + 1)
-              {
-                WB = 1;
-                slideId = slideId + (3 * (listFile.Count - 1)) + 1;
-              } else {
-                slideId = 11;
-                switchTic = 11;
-              }
-            }
+            ticChange.run(ref slideId, ref switchTic, ref WB, listFile);
             break;
           case 16: // MERCI
             cloneSlide.run(template, newPresentation, ref switchTic, ref slideId); 

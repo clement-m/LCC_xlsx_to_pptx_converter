@@ -9,7 +9,6 @@ namespace LCC_xlsx_to_pptx_converter.Class.pptx.A_version
   {
     public static void run(string pathFolder)
     {
-
       using (PresentationDocument presentationDocument = PresentationDocument.Open(
       pathFolder + 
       "\\pptx_template\\" +
@@ -22,7 +21,6 @@ namespace LCC_xlsx_to_pptx_converter.Class.pptx.A_version
         Presentation presentation = presentationPart.Presentation;
 
         presentation.SlideSize.Cy = 5150000;
-        //presentation.SlideSize.Cx = 10;
 
         SlideIdList slideIdList = presentation.SlideIdList;
 

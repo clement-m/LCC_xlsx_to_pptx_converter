@@ -67,6 +67,7 @@
     <Compile Include="Class\pptx\A-version\convertImages.cs" />
     <Compile Include="Class\pptx\A-version\convertTemplate.cs" />
     <Compile Include="Class\pptx\A-version\deleteSlide.cs" />
+    <Compile Include="Class\pptx\A-version\ticChange.cs" />
     <Compile Include="Class\pptx\openXML\deletePptx.cs" />
     <Compile Include="Class\datas\getImage.cs" />
     <Compile Include="Class\datas\getProgramDirectory.cs" />
