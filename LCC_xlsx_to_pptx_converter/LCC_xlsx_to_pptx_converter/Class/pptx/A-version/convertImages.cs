@@ -1,10 +1,11 @@
-﻿using A = Aspose.Slides;
+﻿using System.Collections.Generic;
+using A = Aspose.Slides;
 
 namespace LCC_xlsx_to_pptx_converter.Class.pptx.A_version
 {
   class convertImages
   {
-    public static void run(A.Presentation template, A.Presentation newPresentation, int WB)
+    public static void run(A.Presentation template, A.Presentation newPresentation, List<string> listFile, int WB)
     {
       int slideId = 0;
       foreach (A.Slide slide in template.Slides)
@@ -52,6 +53,7 @@ namespace LCC_xlsx_to_pptx_converter.Class.pptx.A_version
           case 16:
             // MERCI
             break;
+            /*
           case 17:
             // NIVEAU XXX
             //changeImageSlide.run2(newPresentation, imageWanted, WB, 26); // LOGO ORANGE
@@ -257,6 +259,7 @@ namespace LCC_xlsx_to_pptx_converter.Class.pptx.A_version
             imageWanted = 44;
             changeImageSlide.run2(newPresentation, imageWanted, WB, 81);
             break;
+            */
         }
         slideId++;
       }// end foreach

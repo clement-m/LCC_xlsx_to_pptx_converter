@@ -15,8 +15,6 @@ namespace LCC_xlsx_to_pptx_converter.Class.main
 
       Data D = OpenXlsx.run(listFile);
 
-      int WB = 1;
-
       using (A.Presentation newPresentation = new A.Presentation())
       {
 
@@ -26,10 +24,7 @@ namespace LCC_xlsx_to_pptx_converter.Class.main
           + "template.pptx"))
         {
           deleteSlide.run(newPresentation, 0);
-
-          convertTemplate.run(template, newPresentation, WB);
-
-          convertImages.run(template, newPresentation, WB);
+          convert.run(template, newPresentation, listFile);
         }
 
         newPresentation.Save(getProgramDirectory.run() + "\\pptx_template\\" +  "NEW_TEMPLATE.pptx", A.Export.SaveFormat.Pptx);
