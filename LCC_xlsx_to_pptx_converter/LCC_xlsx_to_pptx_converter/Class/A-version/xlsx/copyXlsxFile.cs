@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
-using Aspose.Cells;
+using A = Aspose.Cells;
 
-namespace LCC_xlsx_to_pptx_converter.Class.xlsx.A_version
+namespace LCC_xlsx_to_pptx_converter.Class.A_version
 {
   public static class CopyXlsxFile
   {
@@ -13,9 +13,9 @@ namespace LCC_xlsx_to_pptx_converter.Class.xlsx.A_version
       {
         nbTempFile++;
 
-        Workbook workbook = new Workbook(fileName);
+        A.Workbook workbook = new A.Workbook(fileName);
 
-        workbook.Save(fileName + "_TEMP" + nbTempFile + ".xlsx", SaveFormat.Xlsx);
+        workbook.Save(fileName + "_TEMP" + nbTempFile + ".xlsx", A.SaveFormat.Xlsx);
       }
     }
   }

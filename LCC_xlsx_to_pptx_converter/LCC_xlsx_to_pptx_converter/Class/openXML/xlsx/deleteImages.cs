@@ -1,7 +1,7 @@
 ﻿using System.IO;
 using System.Collections.Generic;
 
-namespace LCC_xlsx_to_pptx_converter.Class.datas
+namespace LCC_xlsx_to_pptx_converter.Class.openXML
 {
   class deleteImages
   {

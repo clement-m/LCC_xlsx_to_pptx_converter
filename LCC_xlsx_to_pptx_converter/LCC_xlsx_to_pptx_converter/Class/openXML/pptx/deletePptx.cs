@@ -1,6 +1,6 @@
 ﻿using System.IO;
 
-namespace LCC_xlsx_to_pptx_converter.Class.pptx.openXML
+namespace LCC_xlsx_to_pptx_converter.Class.openXML
 {
   class deletePptx
   {

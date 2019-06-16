@@ -1,18 +1,15 @@
 ﻿using System.Collections.Generic;
-using System;
 using System.IO;
-using LCC_xlsx_to_pptx_converter.Class.datas;
+using LCC_xlsx_to_pptx_converter.Class.openXML;
 using Aspose.Cells;
 using A = Aspose.Cells.Drawing;
 
-namespace LCC_xlsx_to_pptx_converter.Class.xlsx.A_version
+namespace LCC_xlsx_to_pptx_converter.Class.A_version
 {
   public static class OpenXlsx
   {
-    public static Data run(List<string> listFile)
+    public static void run(List<string> listFile)
     {
-      Data D = new Data();
-
       string dataDir = getProgramDirectory.run();
 
       List<Workbook> WorkBooks = new List<Workbook>();
@@ -33,27 +30,6 @@ namespace LCC_xlsx_to_pptx_converter.Class.xlsx.A_version
         foreach (Worksheet worksheet in workbook.Worksheets)
         {
           worksheetId++;
-
-          Console.WriteLine("WorkSheet N°" + worksheetId);
-
-          foreach (Cell cell in worksheet.Cells)
-          {
-            int rowNumber    = cell.Row;
-            int columnNumber = cell.Column;
-            string textData  = cell.StringValue;
-
-            Console.WriteLine("cell " + rowNumber + " " + columnNumber + "'s text data: " + textData);
-
-            DataSet DS = new DataSet(
-              workbookId,
-              worksheetId,
-              rowNumber,
-              columnNumber,
-              textData
-            );
-
-            D.addDataSet(DS);
-          }
 
           foreach (A.Picture pic in worksheet.Pictures)
           {
@@ -81,8 +57,6 @@ namespace LCC_xlsx_to_pptx_converter.Class.xlsx.A_version
           }
         }
       }
-
-      return D;
     }
   }
 }

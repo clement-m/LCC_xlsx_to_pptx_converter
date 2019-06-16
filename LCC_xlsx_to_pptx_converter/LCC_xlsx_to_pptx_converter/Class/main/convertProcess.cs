@@ -1,9 +1,6 @@
 ﻿using System.Collections.Generic;
-using LCC_xlsx_to_pptx_converter.Class.xlsx.A_version;
-using LCC_xlsx_to_pptx_converter.Class.pptx.openXML;
-using LCC_xlsx_to_pptx_converter.Class.pptx.A_version;
-using LCC_xlsx_to_pptx_converter.Class.datas;
-using A = Aspose.Slides;
+using LCC_xlsx_to_pptx_converter.Class.A_version;
+using LCC_xlsx_to_pptx_converter.Class.openXML;
 
 namespace LCC_xlsx_to_pptx_converter.Class.main
 {
@@ -11,26 +8,16 @@ namespace LCC_xlsx_to_pptx_converter.Class.main
   {
     public static void run(List<string> listFile, string title)
     {
-      deletePptx.run(getProgramDirectory.run() + "\\pptx_template\\" + "NEW_TEMPLATE.pptx");
+      deletePptx.run(getProgramDirectory.run() + "\\pptx_template\\" + "NEW_TEMPLATE.pptx"); // DEBUG
 
-      Data D = OpenXlsx.run(listFile);
+      OpenXlsx.run(listFile);
 
-      using (A.Presentation newPresentation = new A.Presentation())
-      {
+      int tic;
+      int slideId;
 
-        using (A.Presentation template = new A.Presentation(
-          getProgramDirectory.run() 
-          + "\\pptx_template\\" 
-          + "template.pptx"))
-        {
-          deleteSlide.run(newPresentation, 0);
-          convert.run(template, newPresentation, listFile);
-        }
+      createClientPart.run(listFile);
 
-        newPresentation.Save(getProgramDirectory.run() + "\\pptx_template\\" +  "NEW_TEMPLATE.pptx", A.Export.SaveFormat.Pptx);
-      }
-
-      D.dispose();
+      convert.run(listFile);
 
       deleteImages.run(getProgramDirectory.run(), listFile);
 

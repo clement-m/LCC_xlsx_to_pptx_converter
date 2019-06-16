@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using A = Aspose.Slides;
 
-namespace LCC_xlsx_to_pptx_converter.Class.pptx.A_version
+namespace LCC_xlsx_to_pptx_converter.Class.A_version
 {
   class convertImages
   {

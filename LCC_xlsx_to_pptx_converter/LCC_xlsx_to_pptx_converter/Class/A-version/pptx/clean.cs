@@ -3,7 +3,7 @@ using DocumentFormat.OpenXml.Presentation;
 using DocumentFormat.OpenXml.Packaging;
 using A = DocumentFormat.OpenXml.Drawing;
 
-namespace LCC_xlsx_to_pptx_converter.Class.pptx.A_version
+namespace LCC_xlsx_to_pptx_converter.Class.A_version
 {
   public static class Clean
   {

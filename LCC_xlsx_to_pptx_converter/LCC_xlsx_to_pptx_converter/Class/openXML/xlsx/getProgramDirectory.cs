@@ -1,6 +1,6 @@
 ﻿using System.IO;
 
-namespace LCC_xlsx_to_pptx_converter.Class.datas
+namespace LCC_xlsx_to_pptx_converter.Class.openXML
 {
   class getProgramDirectory
   {

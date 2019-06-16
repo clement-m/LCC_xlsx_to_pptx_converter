@@ -61,26 +61,25 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Class\datas\deleteImages.cs" />
-    <Compile Include="Class\pptx\A-version\addSlideProcess.cs" />
-    <Compile Include="Class\pptx\A-version\convert.cs" />
-    <Compile Include="Class\pptx\A-version\convertImages.cs" />
-    <Compile Include="Class\pptx\A-version\convertTemplate.cs" />
-    <Compile Include="Class\pptx\A-version\deleteSlide.cs" />
-    <Compile Include="Class\pptx\A-version\ticChange.cs" />
-    <Compile Include="Class\pptx\openXML\deletePptx.cs" />
-    <Compile Include="Class\datas\getImage.cs" />
-    <Compile Include="Class\datas\getProgramDirectory.cs" />
+    <Compile Include="Class\openXML\xlsx\deleteImages.cs" />
+    <Compile Include="Class\A-version\pptx\addSlideProcess.cs" />
+    <Compile Include="Class\A-version\pptx\convert.cs" />
+    <Compile Include="Class\A-version\pptx\convertImages.cs" />
+    <Compile Include="Class\A-version\pptx\convertTemplate.cs" />
+    <Compile Include="Class\A-version\pptx\createClientPart.cs" />
+    <Compile Include="Class\A-version\pptx\deleteSlide.cs" />
+    <Compile Include="Class\A-version\pptx\ticChange.cs" />
+    <Compile Include="Class\openXML\pptx\deletePptx.cs" />
+    <Compile Include="Class\openXML\xlsx\getImage.cs" />
+    <Compile Include="Class\openXML\xlsx\getProgramDirectory.cs" />
     <Compile Include="Class\main\convertProcess.cs" />
-    <Compile Include="Class\datas\data.cs" />
-    <Compile Include="Class\datas\dataset.cs" />
-    <Compile Include="Class\pptx\A-version\cloneSlide.cs" />
-    <Compile Include="Class\pptx\A-version\changeImageSlide.cs" />
-    <Compile Include="Class\pptx\A-version\changeTextInSlide.cs" />
-    <Compile Include="Class\pptx\A-version\clean.cs" />
-    <Compile Include="Class\xlsx\A-version\copyXlsxFile.cs" />
-    <Compile Include="Class\xlsx\openXML\deleteXlsx.cs" />
-    <Compile Include="Class\xlsx\A-version\openXlsx.cs" />
+    <Compile Include="Class\A-version\pptx\cloneSlide.cs" />
+    <Compile Include="Class\A-version\pptx\changeImageSlide.cs" />
+    <Compile Include="Class\A-version\pptx\changeTextInSlide.cs" />
+    <Compile Include="Class\A-version\pptx\clean.cs" />
+    <Compile Include="Class\A-version\xlsx\copyXlsxFile.cs" />
+    <Compile Include="Class\openXML\xlsx\deleteXlsx.cs" />
+    <Compile Include="Class\A-version\xlsx\openXlsx.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>

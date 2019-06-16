@@ -19,12 +19,15 @@ namespace LCC_xlsx_to_pptx_converter
       try
       {
         var o = new OpenFileDialog();
+
         o.Multiselect = true;
-        if (o.ShowDialog() == System.Windows.Forms.DialogResult.OK)
+
+        if (o.ShowDialog() == DialogResult.OK)
         {
           string[] ddd = o.FileNames;
           
           int size = 0;
+
           foreach(string moncul in ddd)
           {
             size++;
